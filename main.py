@@ -2,16 +2,16 @@ import sys
 from Registry import Registry
 from rich import print
 
-reg_SYSTEM = Registry.Registry(r"C:\Users\Sviat\Desktop\Дипломные штучки Наташи\config\SYSTEM")
+reg_SYSTEM = Registry.Registry(r"Path_To_SYSTEM")
 time_zone_key = reg_SYSTEM.open(r"ControlSet001\Control\TimeZoneInformation") #Проверить точную временную зону
 comp_name_key = reg_SYSTEM.open(r"ControlSet001\Control\ComputerName\ComputerName")
 interface_key = reg_SYSTEM.open(r"ControlSet001\Services\Tcpip\Parameters\Interfaces")
 
-reg_SOFTWARE = Registry.Registry(r"C:\Users\Sviat\Desktop\Дипломные штучки Наташи\config\SOFTWARE")
+reg_SOFTWARE = Registry.Registry(r"Path_To_SOFTWARE")
 sys_info_key = reg_SOFTWARE.open(r"Microsoft\Windows NT\CurrentVersion")
 softwares_key = reg_SOFTWARE.open(r"Microsoft\Windows\CurrentVersion\Uninstall")
 
-reg_SAM = Registry.Registry(r"C:\Users\Sviat\Desktop\Дипломные штучки Наташи\config\SAM")
+reg_SAM = Registry.Registry(r"Path_To_SAM")
 names_key = reg_SAM.open(r"SAM\Domains\Account\Users\Names")
 
 print()
